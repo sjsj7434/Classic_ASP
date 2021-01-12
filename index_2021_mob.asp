@@ -177,7 +177,7 @@
 			}
 		}
 
-		function closePop(){
+		function close_laypop_201228(){
 			$(".laypop_201228").hide();
 			//$("#player_cheering").attr("src","");
 			$( '.pop_dim' ).hide();
@@ -185,6 +185,11 @@
 			//$('body').removeClass('of_hid');
 			$('.pop_dim').css("z-index",7);
 			//clearInterval(repeat);
+		}
+
+		function close_laypop_cheering(){
+			$(".laypop_cheering").removeClass("open");
+			$("#player_cheering").attr("src","");
 		}
 
 		function setCookieAt00( name, value, expiredays ) {
@@ -258,7 +263,7 @@
 							<div class="box_player">
 								<iframe id="player_cheering" class="player_cheering" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
-							<a class="btn_close" id="btn_closeCheering">팝업 닫기</a>
+							<a class="btn_close" id="btn_closeCheering" onClick="close_laypop_cheering()">팝업 닫기</a>
 						</div>
 					</div>
 				</div>
@@ -281,10 +286,10 @@
 							<div class="box_player">
 								<img src="<%=Application("img_path_mob")%>/asset/img/popup_201228_m.jpg" alt="">
 							</div>
-							<div class="popclose_btn" onClick="closePop()">
+							<div class="popclose_btn" onClick="close_laypop_201228()">
 								<!--<span><em>5</em>초 후<br>닫힘</span>-->
 							</div>
-							<div style="background-color:red; height:'40px';" onClick="setCookieAt00('laypop_201228', 'OK', 1); closePop();">
+							<div style="background-color:red; height:'40px';" onClick="setCookieAt00('laypop_201228', 'OK', 1); close_laypop_201228();">
 								<p>.</p>
 								<h2>오늘 하루 안보기</h2>
 								<p>.</p>
