@@ -19,30 +19,6 @@
 	objRs.Close
 	Set objRs = Nothing
 
-	'--경찰&사관 카운트. 2020-11-20 종료.
-	'Dim intPolicePass : intPolicePass = 0
-	'Dim intAirforcePass : intAirforcePass = 0
-	'Dim intArmyPass : intArmyPass = 0
-	'Dim intNavyPass : intNavyPass = 0
-	'Dim intNursePass : intNursePass = 0
-	'Dim intTotalPass : intTotalPass = 0
-
-	'strSql = " SP_SPEC_UNIV_PASS_COUNT '2021', 0"
-	'Set objRs = objDb.sqlQueryNew(strSql, 1)
-	'If Not objRs.Eof Then
-	'    intPolicePass = objRs("PCNT")
-	'    intAirforcePass = objRs("ACNT")
-	'    intArmyPass = objRs("YCNT")
-	'    intNavyPass = objRs("HCNT")
-	'    intNursePass = objRs("NCNT")
-	'End If
-	'objRs.Close
-	'Set objRs = Nothing
-	'intTotalPass = intPolicePass + intAirforcePass + intArmyPass + intNavyPass + intNursePass
-
-
-	' 합격자 롤링 정보 데이터 검색.
-	' YEAR, MAIN_YN, TOP_YN
 	strSql = " EXEC MSP_MG_BOARD_SUGI '2020','', 'o'"
 
 	Set objRs = objDb.sqlQueryNew(strSql,3)
@@ -266,7 +242,6 @@
 			$("#player_cheering").attr("src","https://tv.naver.com/embed/16473159?autoPlay=false");
 		};
 		
-		//영상 팝업 닫기
 		function closePop(){
 			$(".laypop_cheering").removeClass("open");
 			$("#player_cheering").attr("src","");
@@ -279,59 +254,9 @@
 	<!-- wrapper -->
 	<div id="wrapper" class="intro_wrap renew">
 
-        <!-- 경찰대 합격자 배너 200821/2020-11-20 종료.
-        <script>
-            $(document).ready(function (){
-                // 변수를 선언
-                var count = 5;
-                var repeat = setInterval(function () {        // 타이머
-                    count = count -1;
-                    $("#pop200821 span em").html(count);
-                    //alert(count);
-                    if(count<=0){
-                        $("#pop200821").fadeOut(1000);
-                        clearInterval(repeat);
-
-                    }
-                }, 1000);
-
-                $("#pop200821 .float_btn").click(function(){
-                    $("#pop200821").fadeOut(1000);
-                    clearInterval(repeat);
-                });
-
-				if ($("#divTopBanner").length > 0) {
-					$("#pop200821.intro").css("margin-top", "273px");
-				}
-            });
-        </script>
-        <link rel="stylesheet" type="text/css" href="/library/css/result_css_p.css" />
-
-        <div id="pop200821" class="intro">
-            <div class="inner_pop_wrap">
-                <a href="javascript:();" class="float_btn"></a>
-                
-                <a href="http://campus.megastudy.net/common/notice/notice_view.asp?code=17473" target="_self"  style="width:100%; height:677px; display:block; position:relative;">
-                    <span class="popclose_btn"><em style="color:#aeaeaf;">5</em>초 뒤 닫힘</span>
-                    <p class="number_sum"><span>총</span><strong><%=intTotalPass%></strong><span>명</span></p>
-                    <ul class="result_list">
-                        <li><p><strong><%=intPolicePass%></strong><span>명</span></p></li>                        
-                        <li><p><strong><%=intArmyPass%></strong><span>명</span></p></li>
-                        <li><p><strong><%=intNavyPass%></strong><span>명</span></p></li>
-                        <li><p><strong><%=intAirforcePass%></strong><span>명</span></p></li>
-                        <li><p><strong><%=intNursePass%></strong><span>명</span></p></li>
-                    </ul>
-                    <ul class="info_txt">                    
-                        <li>* UPDATE: <%=Replace(FormatDateTime(Now(), 1), Right(FormatDateTime(Now(), 1), 4), "")& " " & Left(FormatDateTime(Now(), 4), 2)%>시 기준</li>
-                        <li>* 해당 합격자는 메가스터디 전체 학원 재원생의 합격자 정보를 집계한 데이터 입니다.</li>
-                        <li>* 합격자는 지속적으로 업데이트 중이며, 상세 합격 정보는 각 학원 사이트에서 확인 가능합니다.</li>
-                        <li>* 단, 업데이트 시점에 따라 상세 합격 정보와 다를 수 있습니다.</li>
-                    </ul>
-                    <img src="https://img.megastudy.net/campus/library/v2015/library/intro_renew/popup_200902_intro.jpg" />
-                </a>
-            </div>
-        </div>
-         경찰대 합격자 배너 200821 -->
+        <!-- 경찰대 합격자 배너 200821/2020-11-20 종료. -->
+		<!-- #include virtual="/index_police_banner.asp" -->
+        <!-- 경찰대 합격자 배너 200821 -->
 
 		<!-- float_right_banner -->
 		<% '하단SS배너 
