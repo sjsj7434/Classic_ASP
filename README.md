@@ -2,10 +2,8 @@
 클래식 ASP /  작성자 : 이상준
 
 ## 공통
->
-setCookieAt00
->   >
-코드
+>setCookieAt00
+>   >코드
 >   >   >
 <pre>
     <code>
