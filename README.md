@@ -3,19 +3,19 @@
 
 ## 공통
 >setCookieAt00
->><pre>
-    <code>
-        todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
-    </code>
-</pre>
->><pre>
-    <code>
-        todayDate.setDate(todayDate.getDate() + expiredays);
-        todayDate.setHours(0);
-        todayDate.setMinutes(0);
-        todayDate.setSeconds(0);
-    </code>
-</pre>
+><pre>
+>    <code>
+>        todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
+>    </code>
+></pre>
+><pre>
+>    <code>
+>        todayDate.setDate(todayDate.getDate() + expiredays);
+>        todayDate.setHours(0);
+>        todayDate.setMinutes(0);
+>        todayDate.setSeconds(0);
+>    </code>
+></pre>
 
 
 <html>
