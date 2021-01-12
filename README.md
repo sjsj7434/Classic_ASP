@@ -3,6 +3,7 @@
 
 ## 공통
 >### 가독성을 위해 코드 줄맞춤 조정
+>### If문 조건이 False일 때 팝업 스크립트를 읽어오지 않도록 수정
 
 >#### setCookieAt00
 >>**setCookieAt00** 라는 쿠키 생성 Function을 Date()의 setDate, hours, minutes, seconds를 사용하여 알아보기 쉽게 바꿈
