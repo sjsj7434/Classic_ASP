@@ -5,9 +5,9 @@
 
 <%
 	Dim strSql
-	' ÇÕ°İÀÚ ¼ö
-	' 2019-03-15 ÇÁ·Î½ÃÀú·Î º¯°æ
-	' year / type / ÇĞ¿øÄÚµå
+	' í•©ê²©ì ìˆ˜
+	' 2019-03-15 í”„ë¡œì‹œì €ë¡œ ë³€ê²½
+	' year / type / í•™ì›ì½”ë“œ
 	strSql = " SP_AMS_UNIV_APPLY_COUNT '2020','DOC','' "
 
 	Dim tCnt : tCnt = 0
@@ -19,7 +19,7 @@
 	objRs.Close
 	Set objRs = Nothing
 
-	'--°æÂû&»ç°ü Ä«¿îÆ®. 2020-11-20 Á¾·á.
+	'--ê²½ì°°&ì‚¬ê´€ ì¹´ìš´íŠ¸. 2020-11-20 ì¢…ë£Œ.
 	'Dim intPolicePass : intPolicePass = 0
 	'Dim intAirforcePass : intAirforcePass = 0
 	'Dim intArmyPass : intArmyPass = 0
@@ -41,7 +41,7 @@
 	'intTotalPass = intPolicePass + intAirforcePass + intArmyPass + intNavyPass + intNursePass
 
 
-	' ÇÕ°İÀÚ ·Ñ¸µ Á¤º¸ µ¥ÀÌÅÍ °Ë»ö.
+	' í•©ê²©ì ë¡¤ë§ ì •ë³´ ë°ì´í„° ê²€ìƒ‰.
 	' YEAR, MAIN_YN, TOP_YN
 	strSql = " EXEC MSP_MG_BOARD_SUGI '2020','', 'o'"
 
@@ -55,8 +55,8 @@
 	objRs.Close
 	Set objRs = Nothing
 
-	' °øÁö»çÇ×
-	strSql = " EXEC MSP_MG_INDEX_NOTICE "' 2021-01-08 ÇÁ·Î½ÃÀú·Î º¯°æ, º¯°æ : ÀÌ»óÁØ
+	' ê³µì§€ì‚¬í•­
+	strSql = " EXEC MSP_MG_INDEX_NOTICE "' 2021-01-08 í”„ë¡œì‹œì €ë¡œ ë³€ê²½, ë³€ê²½ : ì´ìƒì¤€
 
 	Set objRs = objDb.sqlQueryNew(strSql, 1)
 	Dim arrIntroMegaByRS : arrIntroMegaByRS = null
@@ -68,7 +68,7 @@
 
 	Dim arrMBList, dbIndex, dbTitle, dbUrl, dbUrlTarget, dbHCopy, dbSCopy, dbWidth, dbHegiht, dbBackColor, dbImage, dbSubImage, dI, dJ, dbIntroMainChk, autoPlayPopCheering
 	dbIntroMainChk = "MAIN"
-	autoPlayPopCheering = "FALSE"'¿µ»ó ÀÚµ¿ Àç»ı TRUE, FALSE
+	autoPlayPopCheering = "FALSE"'ì˜ìƒ ìë™ ì¬ìƒ TRUE, FALSE
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -84,9 +84,9 @@
 	<meta name="viewport" content="" />
 	<!-- #Include Virtual = "/library/include/reload/favicon.asp" -->
 	<title><%=gMGC_Campus_Title%></title>
-	<!-- #Include Virtual = "/library/include/reload/css_common.asp" --><!-- »çÀÌÆ® °øÅë css -->
-	<link rel="stylesheet" type="text/css" href="/library/css/intro_new_2019.css?v20171222001"><!-- introÀü¿ë css -->
-	<link rel="stylesheet" type="text/css" href="/library/css/intro_renew2018.css"><!-- introÀü¿ë css -->
+	<!-- #Include Virtual = "/library/include/reload/css_common.asp" --><!-- ì‚¬ì´íŠ¸ ê³µí†µ css -->
+	<link rel="stylesheet" type="text/css" href="/library/css/intro_new_2019.css?v20171222001"><!-- introì „ìš© css -->
+	<link rel="stylesheet" type="text/css" href="/library/css/intro_renew2018.css"><!-- introì „ìš© css -->
 	<!-- #include virtual = "/public/jquery.asp" -->
 	<script src="/public/js/waypoints.min.js"></script>
 	<script src="/public/js/jquery.counterup.min.js"></script>
@@ -98,7 +98,7 @@
 		$(document).ready(function(){
 			$("#footer").addClass("intro_renew");
 
-			// ¸ŞÀÎ¹è³Ê Ä«¿îÆ® Ç¥½Ã 2019-11-11
+			// ë©”ì¸ë°°ë„ˆ ì¹´ìš´íŠ¸ í‘œì‹œ 2019-11-11
 			var vBxLiCount = $(".top_bx > li").length -2;
 
 			if (vBxLiCount > 0 ) {
@@ -163,7 +163,7 @@
 				time: 1100
 			});
 
-			// ÇÕ°İÃ»½ÅÈ£
+			// í•©ê²©ì²­ì‹ í˜¸
 			$(".inner_btn1").mouseover(function(){
 				$(".inner_popup1").toggle(function(){
 					$(".inner_popup1").animate({width:"200px", height:"200px"}, "fast");
@@ -175,7 +175,7 @@
 				});
 			});
 
-			// ÇÕ°İ ¸ÂÃãÇü ½Ã½ºÅÛ
+			// í•©ê²© ë§ì¶¤í˜• ì‹œìŠ¤í…œ
 			$(".triple_banner .img_wrap_hd img").on('mouseover focusin', function(){
 				var image = $(this);
 				var button = document.getElementById('start');
@@ -209,9 +209,9 @@
 
         function setCookieAt00( name, value, expiredays ) {
 			/*
-				¼öÁ¤ÀÚ : ÀÌ»óÁØ
-				¼öÁ¤ ³»¿ë : ³¯Â¥ Ã³¸® °£ÆíÈ­, ¿À´Ã ³¯Â¥ + expiredays ½Ã°£Àº 00:00:00
-				¼öÁ¤ÀÏ : 2021-01-08
+				ìˆ˜ì •ì : ì´ìƒì¤€
+				ìˆ˜ì • ë‚´ìš© : ë‚ ì§œ ì²˜ë¦¬ ê°„í¸í™”, ì˜¤ëŠ˜ ë‚ ì§œ + expiredays ì‹œê°„ì€ 00:00:00
+				ìˆ˜ì •ì¼ : 2021-01-08
 			*/
             var todayDate = new Date();
 			todayDate.setDate(todayDate.getDate() + expiredays);
@@ -224,12 +224,12 @@
         var fnPopPollMain = function(strSurveyNm, intHeight) {
             var wid = "500";
             var popupX = (document.body.offsetWidth / 2) - (wid / 2);
-            var popUrl = "http://mcampus.megastudy.net/survey/" + strSurveyNm + "/";	//ÆË¾÷Ã¢¿¡ Ãâ·ÂµÉ ÆäÀÌÁö URL
-            var popOption = "width=" + wid + ", height=" + intHeight + ", resizable=no, scrollbars=yes, status=no, left=" + popupX + ";";    //ÆË¾÷Ã¢ ¿É¼Ç(optoin)
+            var popUrl = "http://mcampus.megastudy.net/survey/" + strSurveyNm + "/";	//íŒì—…ì°½ì— ì¶œë ¥ë  í˜ì´ì§€ URL
+            var popOption = "width=" + wid + ", height=" + intHeight + ", resizable=no, scrollbars=yes, status=no, left=" + popupX + ";";    //íŒì—…ì°½ ì˜µì…˜(optoin)
             window.open(popUrl, strSurveyNm, popOption);
         }
 
-		// ¸ŞÀÎ ¹è³Ê ¸®½ºÆ® click function 
+		// ë©”ì¸ ë°°ë„ˆ ë¦¬ìŠ¤íŠ¸ click function 
 		function fnBannerClick(idx, link, target, width, height) {
 			$.ajax({
 				type:"POST",
@@ -247,23 +247,24 @@
 					}
 				},
 				error: function(xhr, textStatus, errorThrown) {
-					alert("¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù.\nÀá½ÃÈÄ ´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä.");
+					alert("ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.\nì ì‹œí›„ ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”.");
 				}
 			});
 		}
 
-		//ÀÚµ¿ ¿µ»ó Àç»ı
+		//ìë™ ì˜ìƒ ì¬ìƒ
 		function autoPlayPopCheering(){
 			$(".laypop_cheering").addClass("open");
 			$("#player_cheering").attr("src","https://tv.naver.com/embed/16473159?autoPlay=true");
 		};
 
-		//Å¬¸¯ÇßÀ»¶§ ¿µ»ó Àç»ı
+		//í´ë¦­í–ˆì„ë•Œ ì˜ìƒ ì¬ìƒ
 		function clickPlayPopCheering(){
 			$(".laypop_cheering").addClass("open");
 			$("#player_cheering").attr("src","https://tv.naver.com/embed/16473159?autoPlay=false");
 		};
 		
+		//ì˜ìƒ íŒì—… ë‹«ê¸°
 		function closePop(){
 			$(".laypop_cheering").removeClass("open");
 			$("#player_cheering").attr("src","");
@@ -271,17 +272,17 @@
 	</script>
 </head>
 <body>
-	<div id="lsj" style="background-color:red; padding:30px; text-align:center;"><h1>ÀÛ¼ºÁß... ÀÌ»óÁØ</h1></div><!-- ÀÛ¾÷ ¿Ï·á ½Ã »èÁ¦ -->
+	<div id="lsj" style="background-color:red; padding:30px; text-align:center;"><h1>ì‘ì„±ì¤‘... ì´ìƒì¤€</h1></div><!-- ì‘ì—… ì™„ë£Œ ì‹œ ì‚­ì œ -->
 
 	<!-- wrapper -->
 	<div id="wrapper" class="intro_wrap renew">
 
-        <!-- °æÂû´ë ÇÕ°İÀÚ ¹è³Ê 200821/2020-11-20 Á¾·á.
+        <!-- ê²½ì°°ëŒ€ í•©ê²©ì ë°°ë„ˆ 200821/2020-11-20 ì¢…ë£Œ.
         <script>
             $(document).ready(function (){
-                // º¯¼ö¸¦ ¼±¾ğ
+                // ë³€ìˆ˜ë¥¼ ì„ ì–¸
                 var count = 5;
-                var repeat = setInterval(function () {        // Å¸ÀÌ¸Ó
+                var repeat = setInterval(function () {        // íƒ€ì´ë¨¸
                     count = count -1;
                     $("#pop200821 span em").html(count);
                     //alert(count);
@@ -309,29 +310,29 @@
                 <a href="javascript:();" class="float_btn"></a>
                 
                 <a href="http://campus.megastudy.net/common/notice/notice_view.asp?code=17473" target="_self"  style="width:100%; height:677px; display:block; position:relative;">
-                    <span class="popclose_btn"><em style="color:#aeaeaf;">5</em>ÃÊ µÚ ´İÈû</span>
-                    <p class="number_sum"><span>ÃÑ</span><strong><%=intTotalPass%></strong><span>¸í</span></p>
+                    <span class="popclose_btn"><em style="color:#aeaeaf;">5</em>ì´ˆ ë’¤ ë‹«í˜</span>
+                    <p class="number_sum"><span>ì´</span><strong><%=intTotalPass%></strong><span>ëª…</span></p>
                     <ul class="result_list">
-                        <li><p><strong><%=intPolicePass%></strong><span>¸í</span></p></li>                        
-                        <li><p><strong><%=intArmyPass%></strong><span>¸í</span></p></li>
-                        <li><p><strong><%=intNavyPass%></strong><span>¸í</span></p></li>
-                        <li><p><strong><%=intAirforcePass%></strong><span>¸í</span></p></li>
-                        <li><p><strong><%=intNursePass%></strong><span>¸í</span></p></li>
+                        <li><p><strong><%=intPolicePass%></strong><span>ëª…</span></p></li>                        
+                        <li><p><strong><%=intArmyPass%></strong><span>ëª…</span></p></li>
+                        <li><p><strong><%=intNavyPass%></strong><span>ëª…</span></p></li>
+                        <li><p><strong><%=intAirforcePass%></strong><span>ëª…</span></p></li>
+                        <li><p><strong><%=intNursePass%></strong><span>ëª…</span></p></li>
                     </ul>
                     <ul class="info_txt">                    
-                        <li>* UPDATE: <%=Replace(FormatDateTime(Now(), 1), Right(FormatDateTime(Now(), 1), 4), "")& " " & Left(FormatDateTime(Now(), 4), 2)%>½Ã ±âÁØ</li>
-                        <li>* ÇØ´ç ÇÕ°İÀÚ´Â ¸Ş°¡½ºÅÍµğ ÀüÃ¼ ÇĞ¿ø Àç¿ø»ıÀÇ ÇÕ°İÀÚ Á¤º¸¸¦ Áı°èÇÑ µ¥ÀÌÅÍ ÀÔ´Ï´Ù.</li>
-                        <li>* ÇÕ°İÀÚ´Â Áö¼ÓÀûÀ¸·Î ¾÷µ¥ÀÌÆ® ÁßÀÌ¸ç, »ó¼¼ ÇÕ°İ Á¤º¸´Â °¢ ÇĞ¿ø »çÀÌÆ®¿¡¼­ È®ÀÎ °¡´ÉÇÕ´Ï´Ù.</li>
-                        <li>* ´Ü, ¾÷µ¥ÀÌÆ® ½ÃÁ¡¿¡ µû¶ó »ó¼¼ ÇÕ°İ Á¤º¸¿Í ´Ù¸¦ ¼ö ÀÖ½À´Ï´Ù.</li>
+                        <li>* UPDATE: <%=Replace(FormatDateTime(Now(), 1), Right(FormatDateTime(Now(), 1), 4), "")& " " & Left(FormatDateTime(Now(), 4), 2)%>ì‹œ ê¸°ì¤€</li>
+                        <li>* í•´ë‹¹ í•©ê²©ìëŠ” ë©”ê°€ìŠ¤í„°ë”” ì „ì²´ í•™ì› ì¬ì›ìƒì˜ í•©ê²©ì ì •ë³´ë¥¼ ì§‘ê³„í•œ ë°ì´í„° ì…ë‹ˆë‹¤.</li>
+                        <li>* í•©ê²©ìëŠ” ì§€ì†ì ìœ¼ë¡œ ì—…ë°ì´íŠ¸ ì¤‘ì´ë©°, ìƒì„¸ í•©ê²© ì •ë³´ëŠ” ê° í•™ì› ì‚¬ì´íŠ¸ì—ì„œ í™•ì¸ ê°€ëŠ¥í•©ë‹ˆë‹¤.</li>
+                        <li>* ë‹¨, ì—…ë°ì´íŠ¸ ì‹œì ì— ë”°ë¼ ìƒì„¸ í•©ê²© ì •ë³´ì™€ ë‹¤ë¥¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.</li>
                     </ul>
                     <img src="https://img.megastudy.net/campus/library/v2015/library/intro_renew/popup_200902_intro.jpg" />
                 </a>
             </div>
         </div>
-         °æÂû´ë ÇÕ°İÀÚ ¹è³Ê 200821 -->
+         ê²½ì°°ëŒ€ í•©ê²©ì ë°°ë„ˆ 200821 -->
 
 		<!-- float_right_banner -->
-		<% 'ÇÏ´ÜSS¹è³Ê 
+		<% 'í•˜ë‹¨SSë°°ë„ˆ 
 			arrMBList = fnMainBannerList(12, "INTRO", 5)
 			If IsArray(arrMBList) Then
 		%>
@@ -347,9 +348,9 @@
 						%>
 								<a href="javascript:fnBannerClick('<%=dbIndex%>','<%=dbUrl%>','<%=dbUrlTarget%>');" <% If dbUrlTarget = "N" Then %>style="cursor:default;"<% End If %>>
 							<%
-									If dbIndex = "22" Then 'ÇÕ°İÃ»½ÅÈ£ ÆË¾÷ 
+									If dbIndex = "22" Then 'í•©ê²©ì²­ì‹ í˜¸ íŒì—… 
 							%>
-										<img class="inner_popup1" src="<%=Application("img_path")%>/library/intro_renew/intro_ban_blue_big_1.jpg" alt="ÆË¾÷" style="display:none;width:0;height:0;position:absolute;top:0;right:0px;z-index:9999;">
+										<img class="inner_popup1" src="<%=Application("img_path")%>/library/intro_renew/intro_ban_blue_big_1.jpg" alt="íŒì—…" style="display:none;width:0;height:0;position:absolute;top:0;right:0px;z-index:9999;">
 										<img class="inner_btn1" src="<%=dbImage%>" alt="<%=dbTitle%>" />
 							<%
 									Else
@@ -370,39 +371,39 @@
 		<!--// float_right_banner -->
 
 		<div class="modal_dim"></div>
-		<!-- ÃÖ»ó´Ü¸Ş´º -->
+		<!-- ìµœìƒë‹¨ë©”ë‰´ -->
 		<!--#include virtual="/library/include/common/top.asp" -->
-		<!--// ÃÖ»ó´Ü¸Ş´º-->
+		<!--// ìµœìƒë‹¨ë©”ë‰´-->
 
 		<!-- header -->
 		<div id="header_renew">
 			<div class="top_nav_wrap">
 				<%
-					' ÇÔ¼ö¸í : ValueCheck
-					' ±â´É¼³¸í : Null È¤Àº ¹«ÀÔ·Â°ª °Ë»ç
+					' í•¨ìˆ˜ëª… : ValueCheck
+					' ê¸°ëŠ¥ì„¤ëª… : Null í˜¹ì€ ë¬´ì…ë ¥ê°’ ê²€ì‚¬
 					If "2020-12-28 16:30:00" <= Now() And Now() < "2021-12-23 23:59:59" And ValueCheck(request.cookies("divPopup20201228")) = False Then
 				%>
-						<!-- ¼ö´É ¼ö¼®ÇÕ°İÀÚ ÆË¾÷ 201228 -->
+						<!-- ìˆ˜ëŠ¥ ìˆ˜ì„í•©ê²©ì íŒì—… 201228 -->
 						<div id="pop201228" class="intro">
 							<div>
 								<a href="/teamplay/info/2021_perfect.asp"><img src="<%=Application("img_path")%>/library/intro_renew/popup_210108_1.jpg" /></a>
-								<!-- ÆË¾÷³»¿ë-->
+								<!-- íŒì—…ë‚´ìš©-->
 								<div class="layerPop_bottom" style="width:100%;">
-									<div class="check"><input type="checkbox" name="checkbox" value="checkbox" onclick="javascript:setCookieAt00('divPopup20201228', 'OK', 1);$('#pop201228').fadeOut(1000);"><span>¿À´Ã ÇÏ·ç ¾Èº¸±â </span></div>
-									<div class="float_btn" onclick="$('#pop201228').fadeOut(1000);"><span>´İ±â</span><em></em></div>
+									<div class="check"><input type="checkbox" name="checkbox" value="checkbox" onclick="javascript:setCookieAt00('divPopup20201228', 'OK', 1);$('#pop201228').fadeOut(1000);"><span>ì˜¤ëŠ˜ í•˜ë£¨ ì•ˆë³´ê¸° </span></div>
+									<div class="float_btn" onclick="$('#pop201228').fadeOut(1000);"><span>ë‹«ê¸°</span><em></em></div>
 								</div>
 							</div>
 						</div>
-						<!-- ¼ö´± ¼ö¼®ÇÕ°İÀÚ ÆË¾÷ 201228 -->
+						<!-- ìˆ˜ëˆ™ ìˆ˜ì„í•©ê²©ì íŒì—… 201228 -->
 				<%
 					End If
 				%>
                                                     
-				<!-- »ó´Ü ´ë¸Ş´º -->
+				<!-- ìƒë‹¨ ëŒ€ë©”ë‰´ -->
 				<!-- #include virtual="/library/include/common/top_campus_intro_renew.asp" -->
-				<!--// »ó´Ü ´ë¸Ş´º-->
+				<!--// ìƒë‹¨ ëŒ€ë©”ë‰´-->
 				<%
-					'¸ŞÀÎ´ë¹è³Ê ¿¬µ¿
+					'ë©”ì¸ëŒ€ë°°ë„ˆ ì—°ë™
 					arrMBList = fnMainBannerList(2, "INTRO", null)
 					If IsArray(arrMBList) Then
 				%>
@@ -438,7 +439,7 @@
 				%>
 
 				<%
-					'°íÁ¤¹è³Ê ¿¬µ¿
+					'ê³ ì •ë°°ë„ˆ ì—°ë™
 					arrMBList = fnMainBannerList(11, "INTRO", 5)
 					If IsArray(arrMBList) Then
 				%>
@@ -483,7 +484,7 @@
 				<%
 					If "2020-10-12 00:00:00" <= Now() And Now() < "2020-12-12 00:00:00" And ValueCheck(request.cookies("laypop_cheering")) = False Then
 				%>
-						<!-- sÀÎÆ®·Î_¼ö´É ÀÀ¿ø ¿µ»ó ·¹ÀÌ¾î Á¦ÀÛ ¹× Å¸ÀÌ¸Ó ¼¼ÆÃ ¿µ¿ª -->
+						<!-- sì¸íŠ¸ë¡œ_ìˆ˜ëŠ¥ ì‘ì› ì˜ìƒ ë ˆì´ì–´ ì œì‘ ë° íƒ€ì´ë¨¸ ì„¸íŒ… ì˜ì—­ -->
 						<style>
 							.laypop_cheering{position:absolute;top:122px;left:0;right:0;bottom:0;z-index:10000;background:url("<%=Application("img_path")%>/library/intro_renew/intro_cheering/bg_cheering_2020.jpg") 50% no-repeat;background-size:cover;display:none;}
 							.laypop_cheering.open{display:block;}
@@ -495,20 +496,20 @@
 							.laypop_cheering .inner_player .btn_close{position:absolute;top:-40px;right:-110px;width:70px;height:70px;background:url("<%=Application("img_path")%>/library/intro_renew/intro_cheering/btn_close02.png") left top no-repeat;color:transparent;font-size: 0;}
 						</style>
 						<div class="laypop_cheering">
-							<!-- s¿µ»ó¿µ¿ª -->
+							<!-- sì˜ìƒì˜ì—­ -->
 							<div class="inner_player">
-								<h1><img src="<%=Application("img_path")%>/library/intro_renew/intro_cheering/tit_cheering_2020.png" alt="¸Ş°¡½ºÅÍµğÇĞ¿øÀº ºû³ª´Â ´ç½ÅÀÇ ²ŞÀ» ÀÀ¿øÇÕ´Ï´Ù!"></h1>
+								<h1><img src="<%=Application("img_path")%>/library/intro_renew/intro_cheering/tit_cheering_2020.png" alt="ë©”ê°€ìŠ¤í„°ë””í•™ì›ì€ ë¹›ë‚˜ëŠ” ë‹¹ì‹ ì˜ ê¿ˆì„ ì‘ì›í•©ë‹ˆë‹¤!"></h1>
 								<div class="player_cheering">
 									<iframe id="player_cheering" width="960" height="535" src="https://tv.naver.com/embed/16473159" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div>
-								<a href="javascript:closePop();" class="btn_close">ÆË¾÷ ´İ±â</a>
+								<a href="javascript:closePop();" class="btn_close">íŒì—… ë‹«ê¸°</a>
 							</div>
 							<div class="layerPop_bottom" style="width:100%;">
 								<div class="check"><input type="checkbox" name="checkbox" value="checkbox" onclick="javascript:setCookieAt00('laypop_cheering', 'OK', 1); closePop()">
-									<span>¿À´Ã ÇÏ·ç ¾Èº¸±â</span>
+									<span>ì˜¤ëŠ˜ í•˜ë£¨ ì•ˆë³´ê¸°</span>
 								</div>
 							</div>
-							<!-- e¿µ»ó¿µ¿ª -->
+							<!-- eì˜ìƒì˜ì—­ -->
 						</div>
 
 						<script>
@@ -522,7 +523,7 @@
 								}
 							});
 						</script>
-						<!-- eÀÎÆ®·Î_¼ö´É ÀÀ¿ø ¿µ»ó ·¹ÀÌ¾î Á¦ÀÛ ¹× Å¸ÀÌ¸Ó ¼¼ÆÃ ¿µ¿ª -->
+						<!-- eì¸íŠ¸ë¡œ_ìˆ˜ëŠ¥ ì‘ì› ì˜ìƒ ë ˆì´ì–´ ì œì‘ ë° íƒ€ì´ë¨¸ ì„¸íŒ… ì˜ì—­ -->
 				<%
 					End If
 				%>
@@ -531,7 +532,7 @@
 		<!--// header -->
 
 		<%
-			'ÀÇÄ¡ÇÑ¼ö ¿¬µ¿
+			'ì˜ì¹˜í•œìˆ˜ ì—°ë™
 			arrMBList = fnMainBannerList(3, "INTRO", 1)
 			If IsArray(arrMBList) Then 
 				dI = 0 
@@ -546,8 +547,8 @@
 				<div class="bnr_wrap" style="width:100%; background:<%=dbBackColor%> url('<%=dbImage%>') 50% top no-repeat; ">
 					<div class="bnr" style="width:1200px; margin:0 auto; height:219px; position:relative;">
 						<a href="javascript:fnBannerClick('<%=dbIndex%>','<%=dbUrl%>','<%=dbUrlTarget%>');" style="width:1200px;height:219px; display:block;<% If dbUrlTarget = "N" Then %>cursor:default;<% End If %>">
-							<span class="txt"><em class="num"><%=tCnt%></em><em class="txt_m">¸í</em></span>
-							<span class="info_date">UPDATE : <%=Year(date)%>³â <%=Month(date)%>¿ù <%=Day(date)%>ÀÏ <%=Hour(Now)%>½Ã ±âÁØ</span>
+							<span class="txt"><em class="num"><%=tCnt%></em><em class="txt_m">ëª…</em></span>
+							<span class="info_date">UPDATE : <%=Year(date)%>ë…„ <%=Month(date)%>ì›” <%=Day(date)%>ì¼ <%=Hour(Now)%>ì‹œ ê¸°ì¤€</span>
 						</a>
 					</div>
 				</div>
@@ -563,25 +564,25 @@
 			<div class="rolling_result">
 
 				<div class="countup_wrap">
-					<h3 class="sub_title">¿µ±¤ÀÇ ÁÖÀÎ°ø 2020ÇĞ³âµµ <span style="position:relative;"><img style="width:auto; height:auto; margin-top:13px;" src="<%=Application("img_path")%>/library/intro_renew/teamplay_star_bold_2.png"></span>ÆÀÇÃÀåÇĞ»ı</h3>
-					<p class="sub_txt">´ëÀÔ ÇÕ°İÀÌ¶ó´Â ¸ñÇ¥¸¦ À§ÇØ ³»µó¾ú´ø ¹ß°ÉÀ½<br>¸Ş°¡½ºÅÍµğÇĞ¿øÀ» ¸¸³ª ´õ¿í ºû³¯ ¼ö ÀÖ¾ú½À´Ï´Ù.</p>
+					<h3 class="sub_title">ì˜ê´‘ì˜ ì£¼ì¸ê³µ 2020í•™ë…„ë„ <span style="position:relative;"><img style="width:auto; height:auto; margin-top:13px;" src="<%=Application("img_path")%>/library/intro_renew/teamplay_star_bold_2.png"></span>íŒ€í”Œì¥í•™ìƒ</h3>
+					<p class="sub_txt">ëŒ€ì… í•©ê²©ì´ë¼ëŠ” ëª©í‘œë¥¼ ìœ„í•´ ë‚´ë”›ì—ˆë˜ ë°œê±¸ìŒ<br>ë©”ê°€ìŠ¤í„°ë””í•™ì›ì„ ë§Œë‚˜ ë”ìš± ë¹›ë‚  ìˆ˜ ìˆì—ˆìŠµë‹ˆë‹¤.</p>
 
 					<div class="scholarship_wrap renew">
 						<a href="/campus_common/2020_team/">
 							<h4 >
-							<span>made by megastudy</span>Á¦10È¸ <span style="position:relative;"><img style="width:auto; height:auto; margin-top:2px;" src="<%=Application("img_path")%>/library/intro_renew/teamplay_star_bold_1.png" /></span>ÆÀÇÃÀåÇĞ
+							<span>made by megastudy</span>ì œ10íšŒ <span style="position:relative;"><img style="width:auto; height:auto; margin-top:2px;" src="<%=Application("img_path")%>/library/intro_renew/teamplay_star_bold_1.png" /></span>íŒ€í”Œì¥í•™
 							<span class="more_btn"><img style="width:auto; height:auto; margin-top:4px;" src="<%=Application("img_path")%>/library/intro_renew/scho_re_more_btn.gif" /></span>
 							</h4>
 
 							<div class="countup">
-								<p class="number_wrap"><span class="title">´©Àû ÀåÇĞ»ı</span><span class="counter" style="width:75px;">16,955</span><span class="normal">¸í</span></p>
-								<p class="number_wrap"><span class="title">´©Àû ÀåÇĞ±İ</span><span class="counter" style="width:42px;">460</span><span class="normal">¾ï</span><span class="counter">2</span><span class="normal">Ãµ¸¸¿ø
+								<p class="number_wrap"><span class="title">ëˆ„ì  ì¥í•™ìƒ</span><span class="counter" style="width:75px;">16,955</span><span class="normal">ëª…</span></p>
+								<p class="number_wrap"><span class="title">ëˆ„ì  ì¥í•™ê¸ˆ</span><span class="counter" style="width:42px;">460</span><span class="normal">ì–µ</span><span class="counter">2</span><span class="normal">ì²œë§Œì›
 								</span></p>
-								<p class="txt">¡Ø ¸Ş°¡½ºÅÍµğÇĞ¿ø ÀÔÇĞ/¸ğÀÇ°í»ç/Á¹¾÷ ÀåÇĞ±İ ÀüÃ¼ Æ÷ÇÔ<br>&nbsp;&nbsp;&nbsp;(2011~2020ÇĞ³âµµ ´©Àû)</p>
+								<p class="txt">â€» ë©”ê°€ìŠ¤í„°ë””í•™ì› ì…í•™/ëª¨ì˜ê³ ì‚¬/ì¡¸ì—… ì¥í•™ê¸ˆ ì „ì²´ í¬í•¨<br>&nbsp;&nbsp;&nbsp;(2011~2020í•™ë…„ë„ ëˆ„ì )</p>
 							</div>
 						</a>
 
-						<!-- ÇÕ°İÀÚ ·Ñ¸µ -->
+						<!-- í•©ê²©ì ë¡¤ë§ -->
 						<ul class="scholarship_banner">
 						<%
 							If IsNull(arrList) = False Then
@@ -606,7 +607,7 @@
 											<div>
 												<p class="campus"><%=strAcaName%></p>
 												<p class="name"><%=dbS_Name%></p>
-												<p class="circle"><%=dbS_Type%><br>ÇÕ°İ</p>
+												<p class="circle"><%=dbS_Type%><br>í•©ê²©</p>
 												<p class="school"><strong><%=dbS_Univ%></strong><br><%=dbS_Major%></p>
 												<p class="thanks_to"><span><%=UCase(strlen2(dbS_SUBJECT, 140))%></span></p>
 											</div>
@@ -618,13 +619,13 @@
 							End If
 						%>
 						</ul>
-						<!-- //ÇÕ°İÀÚ ·Ñ¸µ -->
+						<!-- //í•©ê²©ì ë¡¤ë§ -->
 					</div>
 				</div>
 
 				<div class="bottom_box">
 					<%
-						'ÆÀÇÃÀåÇĞ ÇÏ´Ü 
+						'íŒ€í”Œì¥í•™ í•˜ë‹¨ 
 						For dJ = 4 To 5 
 							arrMBList = fnMainBannerList(dJ, "INTRO", 1)
 							If IsArray(arrMBList) Then 
@@ -652,7 +653,7 @@
 
 		<!-- middle slick banner -->
 		<%
-			'¼³¸íÈ¸ 
+			'ì„¤ëª…íšŒ 
 			arrMBList = fnMainBannerList(6, "INTRO", null)
 			If IsArray(arrMBList) Then %>
 				<div class="slick_banner_wrap">
@@ -687,11 +688,11 @@
 
 		<!-- triple banner -->
 		<div class="triple_banner_wrap">
-			<h3 class="sub_title">¹Ï°í µû¸£´Â ÇÕ°İ ¸ÂÃãÇü ½Ã½ºÅÛ</h3>
-			<p class="sub_txt">¸Ş°¡½ºÅÍµğÇĞ¿øÀÇ ¸ñÇ¥´Â ¿ÀÁ÷ ÇÑ°¡Áö, ÇÕ°İÀÔ´Ï´Ù.<br>±×·¸±â¿¡ ²÷ÀÓ¾ø´Â ¿¬±¸·Î ÀÔ½Ã¿¡ ²À ¸Â´Â ½Ã½ºÅÛÀ» ¿Ï¼ºÇß½À´Ï´Ù.</p>
+			<h3 class="sub_title">ë¯¿ê³  ë”°ë¥´ëŠ” í•©ê²© ë§ì¶¤í˜• ì‹œìŠ¤í…œ</h3>
+			<p class="sub_txt">ë©”ê°€ìŠ¤í„°ë””í•™ì›ì˜ ëª©í‘œëŠ” ì˜¤ì§ í•œê°€ì§€, í•©ê²©ì…ë‹ˆë‹¤.<br>ê·¸ë ‡ê¸°ì— ëŠì„ì—†ëŠ” ì—°êµ¬ë¡œ ì…ì‹œì— ê¼­ ë§ëŠ” ì‹œìŠ¤í…œì„ ì™„ì„±í–ˆìŠµë‹ˆë‹¤.</p>
 			<div class="triple_banner">
 				<%
-					'ÇÕ°İ ¸ÂÃãÇü ½Ã½ºÅÛ
+					'í•©ê²© ë§ì¶¤í˜• ì‹œìŠ¤í…œ
 					For dJ = 7 To 9
 						arrMBList = fnMainBannerList(dJ, "INTRO", 5)
 						If IsArray(arrMBList) Then
@@ -729,7 +730,7 @@
 		<!-- //triple banner -->
 
         <%
-			'ÇÏ´Ü¿ÍÀÌµå
+			'í•˜ë‹¨ì™€ì´ë“œ
 			arrMBList = fnMainBannerList(dJ, "INTRO", 10) 
 			If IsArray(arrMBList) Then 
 				dI = 0 
@@ -751,12 +752,12 @@
 		%>
 
 		<div class="main_bottom_wrap">
-			<h3 class="sub_title">ÀÔ½Ã ¼º°øÀÇ KEY, ¸Ş°¡½ºÅÍµğÇĞ¿ø</h3>
-			<p class="sub_txt">ÀÌ¹Ì ¼ö¸¹Àº ÇÕ°İÀÚ ¼ö·Î Áõ¸íµÈ ÀÔ½Ã ¸í¹®<br>¸Ş°¡½ºÅÍµğÇĞ¿ø¸¸ÀÌ °¡´ÉÇÑ ÇĞ½À ½Ã½ºÅÛÀ» °æÇèÇÏ¼¼¿ä.</p>
+			<h3 class="sub_title">ì…ì‹œ ì„±ê³µì˜ KEY, ë©”ê°€ìŠ¤í„°ë””í•™ì›</h3>
+			<p class="sub_txt">ì´ë¯¸ ìˆ˜ë§ì€ í•©ê²©ì ìˆ˜ë¡œ ì¦ëª…ëœ ì…ì‹œ ëª…ë¬¸<br>ë©”ê°€ìŠ¤í„°ë””í•™ì›ë§Œì´ ê°€ëŠ¥í•œ í•™ìŠµ ì‹œìŠ¤í…œì„ ê²½í—˜í•˜ì„¸ìš”.</p>
 			<div class="main_bottom">
-				<!--  ÇĞ¿øº° ¸Ş´º -->
+				<!--  í•™ì›ë³„ ë©”ë‰´ -->
 				<!-- #include virtual="/library/include/common/center_campus_intro_renew.asp" -->
-				<!--// ÇĞ¿øº° ¸Ş´º -->
+				<!--// í•™ì›ë³„ ë©”ë‰´ -->
 			</div>
 		</div>
 
@@ -766,7 +767,7 @@
 		%>
 				<div class="notice_wrap renew">
 					<div class="notice">
-						<h4>°øÁö»çÇ×</h4>
+						<h4>ê³µì§€ì‚¬í•­</h4>
 						<div class="bottom_notice_wrap">
 							<ul class="bottom_notice">
 								<%
@@ -787,7 +788,7 @@
 								%>
 							</ul>
 						</div>
-						<a class="all_view" href="/common/notice/notice.asp"><span>+</span> ÀüÃ¼º¸±â</a>
+						<a class="all_view" href="/common/notice/notice.asp"><span>+</span> ì „ì²´ë³´ê¸°</a>
 					</div>
 				</div>
 		<%
@@ -796,9 +797,9 @@
 		<!-- //notice wrap -->
 		<!-- // container -->
 
-		<!--  ÃÖÇÏ´Ü¸Ş´º//-->
+		<!--  ìµœí•˜ë‹¨ë©”ë‰´//-->
 		<!--#include virtual="/library/include/common/bottom.asp" -->
-		<!--  //ÃÖÇÏ´Ü¸Ş´º-->
+		<!--  //ìµœí•˜ë‹¨ë©”ë‰´-->
 
 	</div>
 	<!-- // wrapper -->
