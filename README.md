@@ -1,6 +1,27 @@
 # Classic_ASP
 클래식 ASP /  작성자 : 이상준
 
+## 공통
+>
+setCookieAt00
+>   >
+코드
+>   >   >
+<pre>
+    <code>
+        todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
+    </code>
+</pre>
+<pre>
+    <code>
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        todayDate.setHours(0);
+        todayDate.setMinutes(0);
+        todayDate.setSeconds(0);
+    </code>
+</pre>
+
+
 <html>
     <head></head>
     <body>
@@ -12,19 +33,6 @@
                     <p>
                         setCookieAt00라는 쿠키 생성 Function을 Date()의 setDate,hours,minutes,seconds를 사용하여 알아보기 쉽게 바꿈
                     </p>
-                    <div>
-                        <h3>전</h3>
-                        <p>
-                            todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000)
-                        </p>
-                        <h3>후</h3>
-                        <p>
-                            todayDate.setDate(todayDate.getDate() + expiredays)
-                            todayDate.setHours(0)
-                            todayDate.setMinutes(0)
-                            todayDate.setSeconds(0)
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
