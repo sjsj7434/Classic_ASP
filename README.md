@@ -3,6 +3,7 @@
 
 ## 공통
 >### 가독성을 위해 코드 줄맞춤 조정
+
 >### If문 조건이 False일 때 팝업 스크립트를 읽어오지 않도록 수정
 
 >#### setCookieAt00
@@ -18,6 +19,19 @@
 >        todayDate.setHours(0);
 >        todayDate.setMinutes(0);
 >        todayDate.setSeconds(0);
+>    </code>
+></pre>
+
+>#### 팝업 날짜 조건문
+>>**getYmdhmin**에서도 Now()를 이용하여 날짜를 가져오기 때문에 알아보기 간편하게 수정
+><pre>
+>    <code>
+>        If CDbl(getYmdhmin()) >= CDbl(202012021000) And CDbl(getYmdhmin()) < CDbl(202012031800) Then
+>    </code>
+></pre>
+><pre>
+>    <code>
+>        If "2020-12-02 10:00:00" <= Now() And Now() < "2020-12-03 18:00:00" Then
 >    </code>
 ></pre>
 
