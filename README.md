@@ -24,8 +24,8 @@
 
 >#### 팝업 날짜 조건문
 >>**getYmdhmin()** 에서도 Now()를 이용하여 날짜를 가져오기 때문에 알아보기 간편하게 수정
->>getYmdhmin() => 현재 년월일시간분을 리턴하는 함수 (YYmmddhhmin)
 ><pre>
+>    getYmdhmin() => 현재 년월일시간분을 리턴하는 함수 (YYmmddhhmin)
 >    <code>
 >        If CDbl(getYmdhmin()) >= CDbl(202012021000) And CDbl(getYmdhmin()) < CDbl(202012031800) Then
 >    </code>
