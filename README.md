@@ -46,8 +46,8 @@
 >#### autoPlayPopCheering
 >>변수를 사용해 팝업 영상 자동 재생 제어
 
->#### <!-- #include virtual="/index_police_banner.asp" -->
->>경찰대 합격자 배너 따로 분리 (에러나서 내용은 주석처리 유지)
+>#### index_police_banner.asp
+>>경찰대 합격자 배너 따로 분리하여 include (에러나서 내용은 주석처리 유지)
 
 ***
 
