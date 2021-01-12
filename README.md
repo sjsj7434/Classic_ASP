@@ -32,5 +32,6 @@
 ## Mobile
 >laypop_201228Pop, playPopCheering
 >>일반 팝업과 동영상 팝업 Open Function을 분리
+
 >close_laypop_201228, close_laypop_cheering
 >>팝업 닫기를 직접 클릭 이벤트로 지정하지 않고 따로 Function으로 분리 
