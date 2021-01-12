@@ -26,7 +26,7 @@
 >>**getYmdhmin()** 에서도 Now()를 이용하여 날짜를 가져오기 때문에 알아보기 간편하게 수정
 ><pre>
 >    <code>
->        getYmdhmin() => 현재 년월일시간분을 리턴하는 함수 (YYmmddhhmin)
+>        'getYmdhmin() => 현재 년월일시간분을 리턴하는 함수 (YYmmddhhmin)
 >        If CDbl(getYmdhmin()) >= CDbl(202012021000) And CDbl(getYmdhmin()) < CDbl(202012031800) Then
 >    </code>
 ></pre>
