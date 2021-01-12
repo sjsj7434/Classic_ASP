@@ -23,17 +23,17 @@
 ***
 
 ## PC
->MSP_MG_INDEX_NOTICE
+>#### MSP_MG_INDEX_NOTICE
 >>공지사항을 가져오는 SQL문을 프로시저로 작성
 
->autoPlayPopCheering
+>#### autoPlayPopCheering
 >>변수를 사용해 팝업 영상 자동 재생 제어
 
 ***
 
 ## Mobile
->laypop_201228Pop, playPopCheering
+>#### laypop_201228Pop, playPopCheering
 >>일반 팝업과 동영상 팝업 Open Function을 분리
 
->close_laypop_201228, close_laypop_cheering
+>#### close_laypop_201228, close_laypop_cheering
 >>팝업 닫기를 직접 클릭 이벤트로 지정하지 않고 따로 Function으로 분리 
