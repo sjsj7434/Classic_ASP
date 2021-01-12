@@ -3,14 +3,12 @@
 
 ## 공통
 >setCookieAt00
->   >코드
->   >   >
-<pre>
+>><pre>
     <code>
         todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
     </code>
 </pre>
-<pre>
+>><pre>
     <code>
         todayDate.setDate(todayDate.getDate() + expiredays);
         todayDate.setHours(0);
