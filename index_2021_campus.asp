@@ -56,7 +56,9 @@
 	Set objRs = Nothing
 
 	' 공지사항
-	strSql = " EXEC MSP_MG_INDEX_NOTICE "' 2021-01-08 프로시저로 변경, 변경 : 이상준
+	' 2021-01-08 프로시저로 변경
+	' 변경 : 이상준
+	strSql = " EXEC MSP_MG_INDEX_NOTICE "
 
 	Set objRs = objDb.sqlQueryNew(strSql, 1)
 	Dim arrIntroMegaByRS : arrIntroMegaByRS = null
